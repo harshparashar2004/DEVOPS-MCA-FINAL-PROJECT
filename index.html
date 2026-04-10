@@ -10,20 +10,49 @@
     <div class="container">
         <nav class="navbar">
             <div class="nav-brand">DevOps MCA</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="nav-actions">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="theme-switch">
+                    <input type="checkbox" id="theme-toggle">
+                    <label for="theme-toggle" class="switch" aria-label="Toggle theme">
+                        <span class="switch-slider"></span>
+                    </label>
+                    <span id="theme-status">Light Mode</span>
+                </div>
+            </div>
         </nav>
 
-        <header class="hero">
+        <header class="hero" id="home">
             <div class="hero-content">
+                <p class="eyebrow">DevOps project showcase</p>
                 <h1>🚀 DevOps Project Running</h1>
-                <p>Welcome to the MCA DevOps Final Project</p>
-                <button class="btn">Get Started</button>
+                <p>Welcome to the MCA DevOps Final Project — modern, polished, and deployment-ready with a dynamic theme switch.</p>
+                <div class="hero-actions">
+                    <button class="btn">Get Started</button>
+                    <a class="btn btn-outline" href="#about">Explore</a>
+                </div>
             </div>
+            <div class="hero-glow"></div>
         </header>
+
+        <section class="status-grid">
+            <div class="status-card">
+                <h3>99.9%</h3>
+                <p>Availability guarantee</p>
+            </div>
+            <div class="status-card">
+                <h3>24/7</h3>
+                <p>Monitoring & alerts</p>
+            </div>
+            <div class="status-card">
+                <h3>Auto</h3>
+                <p>CI/CD deployment flows</p>
+            </div>
+        </section>
 
         <section class="features" id="about">
             <h2>Features</h2>
@@ -31,23 +60,39 @@
                 <div class="feature-card">
                     <div class="feature-icon">📦</div>
                     <h3>Containerized</h3>
-                    <p>Built with Docker for easy deployment and scalability</p>
+                    <p>Built with Docker for easy deployment, portability, and scalability.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⚙️</div>
                     <h3>Automated</h3>
-                    <p>Automated CI/CD pipelines for continuous integration</p>
+                    <p>Automated CI/CD pipelines keep code moving smoothly from commit to release.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
                     <h3>Monitored</h3>
-                    <p>Real-time monitoring and logging capabilities</p>
+                    <p>Logs, metrics, and alerts help you stay on top of performance and uptime.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔒</div>
                     <h3>Secure</h3>
-                    <p>Enterprise-grade security and compliance standards</p>
+                    <p>Security-focused design ensures safer releases and stronger compliance.</p>
                 </div>
+            </div>
+        </section>
+
+        <section class="overview">
+            <div class="overview-card">
+                <h2>Why this project?</h2>
+                <p>This project demonstrates how modern DevOps workflows and polished UI combine to create reliable, attractive applications that are ready for deployment.</p>
+            </div>
+            <div class="overview-card overview-card-soft">
+                <h2>Built for</h2>
+                <ul>
+                    <li>Students presenting final projects</li>
+                    <li>Developers preparing portfolios</li>
+                    <li>Teams shipping code faster</li>
+                    <li>Deployments with confidence</li>
+                </ul>
             </div>
         </section>
 
@@ -66,5 +111,6 @@
             <p>Contact: <a href="mailto:project@devops.com">project@devops.com</a></p>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
