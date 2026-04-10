@@ -2,18 +2,25 @@ name: DevOps CI/CD Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout Code
-      uses: actions/checkout@v3
+      - name: Checkout Code
+        uses: actions/checkout@v3
 
-    - name: Build Docker Image
-      run: docker build -t devops-app .
+      - name: Stop old container
+        run: docker stop devops-container || true
 
-    - name: Run Container
-      run: docker run -d -p 3000:3000 devops-app
+      - name: Remove old container
+        run: docker rm devops-container || true
+
+      - name: Build Docker Image
+        run: docker build -t devops-app .
+
+      - name: Run new container
+        run: docker run -d -p 3000:3000 --name devops-container devops-app
