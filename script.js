@@ -21,3 +21,17 @@ if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
 themeToggle.addEventListener('change', () => {
   setTheme(themeToggle.checked);
 });
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
