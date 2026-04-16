@@ -1,4 +1,4 @@
-name: DevOps CI/CD Pipeline
+name: CI/CD to AWS
 
 on:
   push:
@@ -6,21 +6,17 @@ on:
       - main
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
-
-      - name: Stop old container
-        run: docker stop devops-container || true
-
-      - name: Remove old container
-        run: docker rm devops-container || true
-
-      - name: Build Docker Image
-        run: docker build -t devops-app .
-
-      - name: Run new container
-        run: docker run -d -p 3000:3000 --name devops-container devops-app
+      - name: SSH into EC2 and deploy
+        uses: appleboy/ssh-action@v0.1.6
+        with:
+          host: YOUR_EC2_IP
+          username: ubuntu
+          key: ${{ secrets.EC2_SSH_KEY }}
+          script: |
+            docker rm -f $(docker ps -aq) || true
+            docker pull harshdocker608/devops-app
+            docker run -d -p 3000:3000 harshdocker608/devops-app
