@@ -46,7 +46,7 @@ function showFailure(message) {
 // Toggle button loading state during submission.
 function setLoading(isLoading) {
     submitBtn.classList.toggle('loading', isLoading);
-    submitBtn.textContent = isLoading ? 'Creating account...' : 'Create Account';
+    submitBtn.textContent = isLoading ? 'Getting started...' : 'Get Started';
 }
 
 // Validate the registration form values.
@@ -109,14 +109,14 @@ registerForm.addEventListener('submit', async (event) => {
 
         // For now the UI is ready for backend integration.
         showSuccess('Registration successful — welcome to HARSH DEVOPS SOLUTIONS!');
-        // Redirect to the main website after successful registration
+        // Redirect to the portfolio page after successful registration
         setTimeout(() => {
             window.location.href = 'portfolio.html';
         }, 1500); // Small delay to show success message
     } catch (error) {
         // This fallback preserves the demo flow when backend is not yet implemented.
         showSuccess('Account created successfully. Backend integration will be completed later.');
-        // Also redirect in fallback case
+        // Also redirect to portfolio page in fallback case
         setTimeout(() => {
             window.location.href = 'portfolio.html';
         }, 1500);
