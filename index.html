@@ -9,7 +9,13 @@
 <body>
     <div class="container">
         <nav class="navbar">
-            <div class="nav-brand">DevOps MCA</div>
+            <div class="nav-brand">
+                <span class="brand-title">DevOps MCA</span>
+                <button id="user-badge" class="user-badge" aria-label="Open user menu">
+                    <span id="user-name-text">Login</span>
+                    <span class="user-arrow">▼</span>
+                </button>
+            </div>
             <div class="nav-actions">
                 <ul class="nav-links">
                     <li><a href="#home">Home</a></li>
@@ -138,6 +144,40 @@
             <p>Built with ❤️ by HARSH PARASHAR</p>
         </footer>
     </div>
+
+    <div id="login-screen" class="login-screen active" role="dialog" aria-modal="true">
+        <div class="login-card">
+            <div class="login-header">
+                <h2>Sign in to continue</h2>
+                <p>Login with Google or phone number for instant access.</p>
+            </div>
+            <div class="login-actions">
+                <button id="google-login-btn" class="login-btn google">Continue with Google</button>
+                <div class="divider"><span>or</span></div>
+                <label for="phone-input">Phone number</label>
+                <input id="phone-input" type="tel" placeholder="+91 9876543210" autocomplete="tel" />
+                <button id="phone-login-btn" class="login-btn phone">Login with phone</button>
+                <p class="login-note">This demo stores a simple username locally. No real Google or SMS auth is performed.</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="user-sidebar" class="user-sidebar" aria-hidden="true">
+        <div class="sidebar-header">
+            <div>
+                <p class="sidebar-title">User Menu</p>
+                <p class="sidebar-username" id="sidebar-username">Guest</p>
+            </div>
+            <button id="sidebar-close" class="sidebar-close" aria-label="Close user menu">×</button>
+        </div>
+        <nav class="sidebar-links">
+            <button id="help-btn" class="sidebar-link">Help</button>
+            <button id="user-details-btn" class="sidebar-link">User Details</button>
+            <button id="password-reset-btn" class="sidebar-link">Password Reset</button>
+        </nav>
+    </div>
+    <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
