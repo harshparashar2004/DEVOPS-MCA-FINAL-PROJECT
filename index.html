@@ -2,182 +2,39 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0;url=register.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Project</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>HARSH DEVOPS SOLUTIONS</title>
+    <style>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #0b1120;
+            color: #f8fafc;
+        }
+        .redirect-box {
+            text-align: center;
+            max-width: 520px;
+            padding: 28px;
+            border: 1px solid rgba(255,255,255,0.12);
+            border-radius: 24px;
+            backdrop-filter: blur(16px);
+            background: rgba(255,255,255,0.05);
+        }
+        a {
+            color: #5d9cff;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="navbar">
-            <div class="nav-brand">
-                <span class="brand-title">DevOps MCA</span>
-                <button id="user-badge" class="user-badge" aria-label="Open user menu">
-                    <span id="user-name-text">Login</span>
-                    <span class="user-arrow">▼</span>
-                </button>
-            </div>
-            <div class="nav-actions">
-                <ul class="nav-links">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="portfolio.html">Portfolio</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-                <div class="theme-switch">
-                    <input type="checkbox" id="theme-toggle">
-                    <label for="theme-toggle" class="switch" aria-label="Toggle theme">
-                        <span class="switch-slider"></span>
-                    </label>
-                    <span id="theme-status">Light Mode</span>
-                </div>
-            </div>
-        </nav>
-
-        <header class="hero" id="home">
-            <div class="hero-content">
-                <p class="eyebrow">DevOps project showcase</p>
-                <h1>Final Check 🚀</h1>
-                <p>Welcome to the MCA DevOps Final Project — modern, polished, and deployment-ready with a dynamic theme switch.</p>
-                <div class="hero-actions">
-                    <a class="btn" href="portfolio.html">Get Started</a>
-                    <a class="btn btn-outline" href="#about">Explore</a>
-                </div>
-            </div>
-            <div class="hero-glow"></div>
-        </header>
-
-        <section class="status-grid">
-            <div class="status-card">
-                <h3>99.9%</h3>
-                <p>Availability guarantee</p>
-            </div>
-            <div class="status-card">
-                <h3>24/7</h3>
-                <p>Monitoring & alerts</p>
-            </div>
-            <div class="status-card">
-                <h3>Auto</h3>
-                <p>CI/CD deployment flows</p>
-            </div>
-        </section>
-
-        <section class="features" id="about">
-            <h2>Features</h2>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">📦</div>
-                    <h3>Containerized</h3>
-                    <p>Built with Docker for easy deployment, portability, and scalability.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⚙️</div>
-                    <h3>Automated</h3>
-                    <p>Automated CI/CD pipelines keep code moving smoothly from commit to release.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">📊</div>
-                    <h3>Monitored</h3>
-                    <p>Logs, metrics, and alerts help you stay on top of performance and uptime.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Secure</h3>
-                    <p>Security-focused design ensures safer releases and stronger compliance.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="overview">
-            <div class="overview-card">
-                <h2>Why this project?</h2>
-                <p>This project demonstrates how modern DevOps workflows and polished UI combine to create reliable, attractive applications that are ready for deployment.</p>
-            </div>
-            <div class="overview-card overview-card-soft">
-                <h2>Built for</h2>
-                <ul>
-                    <li>Students presenting final projects</li>
-                    <li>Developers preparing portfolios</li>
-                    <li>Teams shipping code faster</li>
-                    <li>Deployments with confidence</li>
-                </ul>
-            </div>
-        </section>
-
-        <section class="tech-stack">
-            <h2>Tech Stack</h2>
-            <div class="tech-grid">
-                <div class="tech-item">Node.js</div>
-                <div class="tech-item">Express</div>
-                <div class="tech-item">Docker</div>
-                <div class="tech-item">DevOps</div>
-            </div>
-        </section>
-
-        <section class="contact" id="contact">
-            <h2>Contact Developer</h2>
-            <div class="contact-content">
-                <div class="contact-card">
-                    <div class="contact-icon">👨‍💻</div>
-                    <h3>HARSH PARASHAR</h3>
-                    <p>Full Stack Developer & DevOps Engineer</p>
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <span class="contact-label">Email:</span>
-                            <a href="mailto:harshparashar11012004@gmail.com" class="contact-link">harshparashar11012004@gmail.com</a>
-                        </div>
-                        <div class="contact-item">
-                            <span class="contact-label">Project:</span>
-                            <span>DevOps MCA Final Project</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-graphics">
-                    <div class="graphic-element graphic-1"></div>
-                    <div class="graphic-element graphic-2"></div>
-                    <div class="graphic-element graphic-3"></div>
-                </div>
-            </div>
-        </section>
-
-        <footer class="footer">
-            <p>&copy; 2026 DevOps MCA Final Project. All rights reserved.</p>
-            <p>Built with ❤️ by HARSH PARASHAR</p>
-        </footer>
+    <div class="redirect-box">
+        <h1>Welcome to HARSH DEVOPS SOLUTIONS</h1>
+        <p>If you are not redirected automatically, <a href="register.html">click here to register</a>.</p>
     </div>
-
-    <div id="login-screen" class="login-screen active" role="dialog" aria-modal="true">
-        <div class="login-card">
-            <div class="login-header">
-                <h2>Sign in to continue</h2>
-                <p>Login with Google or phone number for instant access.</p>
-            </div>
-            <div class="login-actions">
-                <button id="google-login-btn" class="login-btn google">Continue with Google</button>
-                <div class="divider"><span>or</span></div>
-                <label for="phone-input">Phone number</label>
-                <input id="phone-input" type="tel" placeholder="+91 9876543210" autocomplete="tel" />
-                <button id="phone-login-btn" class="login-btn phone">Login with phone</button>
-                <p class="login-note">This demo stores a simple username locally. No real Google or SMS auth is performed.</p>
-            </div>
-        </div>
-    </div>
-
-    <div id="user-sidebar" class="user-sidebar" aria-hidden="true">
-        <div class="sidebar-header">
-            <div>
-                <p class="sidebar-title">User Menu</p>
-                <p class="sidebar-username" id="sidebar-username">Guest</p>
-            </div>
-            <button id="sidebar-close" class="sidebar-close" aria-label="Close user menu">×</button>
-        </div>
-        <nav class="sidebar-links">
-            <button id="help-btn" class="sidebar-link">Help</button>
-            <button id="user-details-btn" class="sidebar-link">User Details</button>
-            <button id="password-reset-btn" class="sidebar-link">Password Reset</button>
-        </nav>
-    </div>
-    <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
-
-    <script src="script.js"></script>
 </body>
 </html>

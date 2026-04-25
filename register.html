@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | HARSH DEVOPS SOLUTIONS</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="page-shell">
+        <div class="form-panel">
+            <div class="brand-block">
+                <span class="brand-label">Welcome to</span>
+                <h1>HARSH DEVOPS SOLUTIONS</h1>
+                <p class="brand-copy">Create a secure account to access your DevOps control panel and project dashboard.</p>
+            </div>
+
+            <form id="register-form" class="register-form" novalidate>
+                <div class="form-row">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Enter your full name" required>
+                    <small class="error-message" id="fullNameError"></small>
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                    <small class="error-message" id="emailError"></small>
+                </div>
+
+                <div class="form-row">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Create a password" required>
+                    <small class="error-message" id="passwordError"></small>
+                </div>
+
+                <div class="form-row">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Re-enter password" required>
+                    <small class="error-message" id="confirmPasswordError"></small>
+                </div>
+
+                <button type="submit" id="submitBtn" class="submit-btn">Create Account</button>
+                <p class="status-text" id="statusText"></p>
+
+                <p class="footer-link">
+                    Already have an account? <a href="index.html">Login</a>
+                </p>
+            </form>
+        </div>
+
+        <div class="visual-panel">
+            <div class="visual-card">
+                <div class="visual-header">
+                    <span class="visual-tag">Premium DevOps</span>
+                    <h2>Register with confidence.</h2>
+                </div>
+                <p class="visual-text">This registration page is designed for a professional final year project presentation. It is built for easy backend integration later, including MongoDB-based user registration and secure API routing.</p>
+                <div class="visual-details">
+                    <div>
+                        <span>Secure</span>
+                        <p>Future-ready auth architecture.</p>
+                    </div>
+                    <div>
+                        <span>Responsive</span>
+                        <p>Looks great on mobile and desktop.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="register.js"></script>
+</body>
+</html>
