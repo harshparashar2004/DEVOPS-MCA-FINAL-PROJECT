@@ -98,8 +98,8 @@ registerForm.addEventListener('submit', async (event) => {
     };
 
     try {
-        // Placeholder POST request to /register endpoint.
-        await fetch('/register', {
+        // POST request to /register endpoint.
+        const response = await fetch(`${window.location.origin}/register`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -107,19 +107,27 @@ registerForm.addEventListener('submit', async (event) => {
             body: JSON.stringify(formData),
         });
 
-        // For now the UI is ready for backend integration.
-        showSuccess('Registration successful — welcome to HARSH DEVOPS SOLUTIONS!');
-        // Redirect to the portfolio page after successful registration
-        setTimeout(() => {
-            window.location.href = 'portfolio.html';
-        }, 1500); // Small delay to show success message
+        let data;
+        try {
+            data = await response.json();
+        } catch (parseError) {
+            data = { message: await response.text() };
+        }
+
+        if (response.ok) {
+            // Success
+            showSuccess(data.message || 'Registration successful — welcome to HARSH DEVOPS SOLUTIONS!');
+            // Redirect to the home page after successful registration
+            setTimeout(() => {
+                window.location.href = `${window.location.origin}/`;
+            }, 1200);
+        } else {
+            // Server returned an error
+            showFailure(data.message || 'Registration failed. Please try again.');
+        }
     } catch (error) {
-        // This fallback preserves the demo flow when backend is not yet implemented.
-        showSuccess('Account created successfully. Backend integration will be completed later.');
-        // Also redirect to portfolio page in fallback case
-        setTimeout(() => {
-            window.location.href = 'portfolio.html';
-        }, 1500);
+        console.error('Registration error:', error);
+        showFailure('Network error. Please check your connection and try again.');
     } finally {
         setLoading(false);
     }
