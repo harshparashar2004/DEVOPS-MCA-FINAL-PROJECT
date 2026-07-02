@@ -116,7 +116,7 @@ registerForm.addEventListener('submit', async (event) => {
 
         if (response.ok) {
             // Success
-            showSuccess(data.message || 'Registration successful — welcome to HARSH DEVOPS SOLUTIONS!');
+            showSuccess(data.message || 'Registration successful — welcome to Danavops!');
             // Redirect to the home page after successful registration
             setTimeout(() => {
                 window.location.href = `${window.location.origin}/`;

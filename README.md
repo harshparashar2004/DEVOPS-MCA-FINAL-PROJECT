@@ -1,2 +1,2 @@
-# DEVOPS-MCA-FINAL-PROJECT
-MCA firnal semester Major project
+# Danavops
+Danavops — Cloud & DevOps services. This repo holds a demo website and sample backend for showcasing cloud and DevOps workflows.

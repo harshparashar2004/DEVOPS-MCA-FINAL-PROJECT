@@ -98,14 +98,14 @@ function getBotReply(message) {
   }
 
   if (normalized.includes('hello') || normalized.includes('hi')) {
-    return 'Hello! I am your DevOps assistant bot. Ask me anything about this project, deployment, or registration.';
+    return 'Hello! I am DanaBot — your Danavops assistant. Ask me anything about deployment, registration, or our services.';
   }
 
   if (normalized.includes('help') || normalized.includes('support')) {
     return 'I can help with registration issues, deployment questions, and general DevOps guidance. Try asking something like “How do I deploy?” or “Why is registration stuck?”.';
   }
 
-  return 'I am still learning. For now, I can help with DevOps, registration, MongoDB, and deployment guidance. Try asking something specific.';
+  return 'I am still learning. For now, I can help with registration, deployment, and Danavops services. Try asking something specific.';
 }
 
 if (chatForm && chatInput && chatWindow) {

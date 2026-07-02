@@ -16,7 +16,7 @@ let mongoConnected = false;
 // ================================
 // MongoDB Connection
 // ================================
-const mongoURI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/devopsdb";
+const mongoURI = process.env.MONGODB_URI || "mongodb://127.0.0.1:27017/danavopsdb";
 
 console.log("Connecting to MongoDB...");
 mongoose.connect(mongoURI)
@@ -141,7 +141,7 @@ app.post("/register", async (req, res) => {
 
         console.log("User registered successfully:", newUser.email);
         res.status(201).json({
-            message: "Registration successful — welcome to HARSH DEVOPS SOLUTIONS!",
+            message: "Registration successful — welcome to Danavops!",
         });
     } catch (error) {
         console.error("Registration error details:", error.message);
